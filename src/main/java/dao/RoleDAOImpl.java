@@ -10,7 +10,7 @@ import org.hibernate.Transaction;
 import java.util.ArrayList;
 import java.util.List;
 
-public class RoleDAOImpl implements RoleDAO {
+public class RoleDAOImpl  {
     private static SessionFactory sessionFactory = HibernateUtils.getSessionFactory();
     public List<Role> getRoleById(Integer id) {
         List<Role> list = null;

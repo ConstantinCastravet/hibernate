@@ -40,7 +40,6 @@ public class Main {
         employers.add(addEmployee("Rudolf", "RUf911",
                 "rufic@yahoo.com", 1, false, 1));
 
-
         callDB.toDatabase(employers);
 
         setEmployeeForTask(addTask("Exceptions", "Create your own Exception", Status.DONE),
@@ -55,20 +54,20 @@ public class Main {
         setEmployeeForTask(addTask("Stream API", "Improve app", Status.TODO),
                 "Adolf");
 
-        /*It's return user with roles example*/
-        //        List<Employer> emp = callDB.getUserById(2);
-//        System.out.println(emp.get(0).getRoles());
-//
-//        System.out.println(callDB.getEmployersByRole("User"));
-//        System.out.println(callDB.getEmployersByDiscipline("AM"));
-//
-//        callDB.updateDiscipline(1, callDB.getEmployeeByName("Jostea"));
-//        callDB.updateDiscipline(2, callDB.getEmployeeByName("Mike"));
-//        callDB.updateDiscipline(3, callDB.getEmployeeByName("Adolf"));
-//
-//        callDB.deleteEmployee(4);
-//        System.out.println(callDB.allFomDatabase(employeeOut));
-//        System.out.println(getListOfDisciplineLowAmountOfEmployers());
+        //This is execute task
+        List<Employer> emp = callDB.getUserById(2);
+        System.out.println(emp.get(0).getRoles());
+
+        System.out.println(callDB.getEmployersByRole("User"));
+        System.out.println(callDB.getEmployersByDiscipline("AM"));
+
+        callDB.updateDiscipline(1, callDB.getEmployeeByName("Jostea"));
+        callDB.updateDiscipline(2, callDB.getEmployeeByName("Mike"));
+        callDB.updateDiscipline(3, callDB.getEmployeeByName("Adolf"));
+
+        callDB.deleteEmployee(4);
+        System.out.println(callDB.allFomDatabase(employeeOut));
+        System.out.println(getListOfDisciplineLowAmountOfEmployers());
     }
 
 

@@ -10,7 +10,7 @@ import org.hibernate.Transaction;
 
 import java.util.List;
 
-public class DisciplineDAOImpl implements DisciplineDAO {
+public class DisciplineDAOImpl  {
     private static SessionFactory sessionFactory = HibernateUtils.getSessionFactory();
 
     public List<Discipline> getDisciplineById(Integer id) {
