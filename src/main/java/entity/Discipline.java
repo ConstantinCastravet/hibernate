@@ -23,7 +23,7 @@ public class Discipline {
     String name;
 
 
-    @OneToMany(mappedBy = "discipline")
+    @OneToMany(mappedBy = "discipline",fetch = FetchType.EAGER)
     List<Employer> members;
 
 

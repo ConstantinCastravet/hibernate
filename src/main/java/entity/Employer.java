@@ -4,6 +4,7 @@ import lombok.*;
 import org.hibernate.annotations.NaturalId;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -19,7 +20,7 @@ public class Employer {
 
     @Column
     private String name;
-
+    @NaturalId
     @Column
     String email;
 
@@ -33,8 +34,7 @@ public class Employer {
     @Column
     Boolean enabled;
 
-    @ManyToMany
-    @JoinTable(name = "employer_role")
+    @ManyToMany(fetch = FetchType.EAGER)
     List<Role> roles;
 
     @ManyToOne
@@ -50,6 +50,8 @@ public class Employer {
                 "name='" + name + '\'' +
                 ", email='" + email + '\'' +
                 ", userName='" + userName + '\'' +
-                '}';
+                ", roles=" + roles +
+                ", discipline=" + discipline +
+                "}\n";
     }
 }
